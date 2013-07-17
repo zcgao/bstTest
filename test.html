@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bootstrap学习 by 司徒正美</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <link rel="stylesheet" href="http://files.cnblogs.com/rubylouvre/bootstrap.css"/> 
+        <script src="http://files.cnblogs.com/rubylouvre/jquery1.83.js" > </script>
+        <script src="http://files.cnblogs.com/rubylouvre/bootstrap-transition.js"></script>
+        <script src="http://files.cnblogs.com/rubylouvre/bootstrap-scrollspy.js"></script>
+        <script src="http://files.cnblogs.com/rubylouvre/bootstrap-dropdown.js"></script>
+
+
+        <script>
+            $(function(){
+                //注意：事件要绑定在UI容器上，而不是关闭按钮中
+                $('.dropdown-toggle').dropdown()
+                //绑定activate事件
+                $("#navbarExample .nav li").on("activate", function(){
+                    window.console && console.log( $(this).find("a").attr("href"))
+                })
+            })
+             
+        </script>
+    </head>
+    <body>
+        <div id="navbarExample" class="navbar navbar-static">
+            <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                    <a class="brand" href="#">scrollspy</a>
+                    <ul class="nav">
+                        <li class="active"><a href="#doomsday">世界末日</a></li>
+                        <li><a href="#love">最爱的人</a></li>
+                        <li><a href="#ruby">ruby</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">党国大事 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="#one">遛狗</a></li>
+                                <li><a href="#two">失踪</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#three">耳光</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example" style="height:180px;margin-left:2em;width:600px;border:1px solid black;overflow:scroll;">
+            <h4 id="doomsday">世界末日</h4>
+            <p>
+               今天世界末日，去学校食堂打饭，刷卡的时候对那打饭的师傅说：“都世界末日啦，打饭还要钱啊？”谁知，买饭的大妈淡定的说：“都世界末日啦，要钱还有什么用，来来来，把卡上的钱都刷完吧”。。。。。。。我们都石化啦。。。。。
+            </p>
+            <h4 id="love">最爱的人</h4>
+            <pre>
+	      男人女人在不同的年龄阶段最爱的人分别是：
+
+0--5岁：女人：妈妈；男人：妈妈。
+6--10岁：女人：不是讨厌的男孩就行；男孩：能和我一起欺负其他人的男孩。
+11--15岁：女人：16岁到19岁的大男孩，只要不是本班的那一帮就行；男人：篮球、足球、乒乓球、网球。。。。
+16--25岁：女人：26岁至29岁的有事业基础、有品位、有才华的男人；男人：20岁至24岁的漂亮、有身段的女人。
+25--30岁：女人：坚持要比自己大的男人：男人：20岁至24岁的漂亮、有身段的女人。
+30--40岁：女人：心灵契合的男人；男人：20岁至24岁的漂亮、有身段的女人。
+40--50岁：女人：男人；男人：20岁至24岁的漂亮、有身段的女人。
+50--60岁：女人：能和她终老的男人；男人：20岁至24岁的漂亮、有身段的女人。
+60--70岁：女人：和他在一起、需要自己照顾的男人；男人：20岁至24岁的漂亮、有身段的女人。
+70--80岁：女人：和他在一起，不需要自己照顾的男人；男人：20岁至24岁的漂亮、有身段的女人。
+80--90岁：女人：死在自己后面的男人；男人：虽然我已经老眼昏花，不过我还是喜欢20岁至24岁的漂亮、有身段的女人。
+
+结论：男人是专一的。
+
+
+            </pre>
+            <h4 id="ruby">Ruby开发</h4>
+            <p >
+                我仅仅懂一点ASP.NET进行Web开发的知识。我知道将来必然是Web技术的天下。
+                我的理解，Web开发主流有Java系列、ASP.NET系列，小众一点的有PHP，RoR。 
+                我是被Ruby吸引而学习RoR的，现在看那本《Web开发敏捷之道》第四版，
+                用Aptana Studio作为IDE，我买了个MacBookPro，边学书上的例子，边练习。
+                现在的问题是，按照书上的代码敲进去就能运行，但是不理解其中的含义啊。
+            </p>
+            <h4 id="one">遛狗</h4>
+            <p>
+	      近日，拍摄于四川绵阳街头的一张照片引起热议，一辆在路上行驶的法院警车，车窗里伸出一个宠物狗的脑袋，四处张望。此情景被怀疑是公务人员私用警车带宠物狗兜风。经调查得知，这是我国新近引进的一批特殊品种警犬，为麻痹犯罪分子，故意化妆成宠物狗的样子。
+            </p>
+            <h4 id="two">失踪</h4>
+            <p>
+	      4月25日，19岁的韩耀在云南省昆明市晋宁县晋城镇南门村鑫云冷库附近失踪。家属在寻找时，竟然发现这一区域已先后有8名青少年失踪，其中近一年内就有6人。有一名青年雷玉生就在此地的大街上被人拖进了一面包车，被扔进黑砖窑强迫劳动，后逃离黑砖窑重获自由。
+            </p>
+            <h4 id="three">耳光</h4>
+            <p>
+	      30多岁女人直接吐东西在刚扫过的地上，环卫大姐上去说了两句，结果挨了三巴掌三脚。见到被打的环卫大姐时，她精神不好，坐在凳子上不说话，左脸的伤痕还很显眼，工友在一旁照料她。2012年5月4日，浙江省，杭州市。
+            </p>
+            <p>
+	      尹大姐说：“小孩子都知道不能在街上乱吐。”那女人说：那不就是你们环卫应该做的事情吗？尹大姐说：难道我们环卫工人就低人一等吗？”话音刚落，“啪”“啪”“啪”三个巴掌落在尹大姐脸上。
+            </p>
+
+        </div>
+    </body>
+</html>
